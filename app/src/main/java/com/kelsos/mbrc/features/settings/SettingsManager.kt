@@ -4,6 +4,7 @@ import kotlinx.coroutines.flow.Flow
 import java.time.Instant
 
 interface SettingsManager {
+  val state: Flow<SettingsState>
   fun onlyAlbumArtists(): Flow<Boolean>
   suspend fun setShouldDisplayOnlyAlbumArtist(onlyAlbumArtist: Boolean)
   suspend fun shouldShowChangeLog(): Boolean
